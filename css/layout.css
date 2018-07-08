@@ -1,0 +1,240 @@
+/* ====== CSS Reset ====== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ====== Default CSS ====== */
+
+body{
+    background: #F2F2F2;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    background-color: #000;
+}
+.logo{
+    max-width: 620px;
+    color: #50FF44;
+    font-size: 36px;
+    line-height: 74px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 28px 0 50px;
+}
+.container section{ margin-bottom: 24px;}
+
+
+/* ====== index CSS ====== */
+.adBlock img{ width: 100%;}
+.comicInfo{ display: flex;}
+.comicInfo div{ }
+.comicInfo div >img{ 
+    width: 300px; 
+    display: inline-block; 
+    border: 4px solid #000000; 
+    box-sizing: border-box; 
+}
+.comicInfo div >h2{
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    padding: 8px 24px;
+    margin-bottom: 16px;
+
+}
+.comicInfo div > table{ 
+    display: block;
+    padding-left: 24px;
+    font-size: 16px;
+}
+.comicInfo div > table tr td{ line-height: 24px; margin-bottom: 8px; display: inline-block;}
+.comicInfo div > table tr td.title {font-weight: bold; width: 30%;}
+.comicInfo div > table tr td.title:last-child{ margin-top: 16px;} 
+.comicInfo div > table tr td p{ margin-bottom: 20px;}
+.chapterList h3{ 
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 24px;
+    font-size: 24px;
+}
+.chapterList div{
+    width: 100%;
+    border: 4px solid #000000;
+    box-sizing: border-box;
+    
+}
+.chapterList div a{
+    font-size: 16px;
+    color: #000000;
+    line-height: 24px;
+    padding: 5px 24px;
+    margin: 5px 0;
+    display: block;
+    text-decoration: none;
+}
+.chapterList div a:hover{
+    color: #fff;
+    background-color: #000;
+}
+.chapterList div a>span{
+    display: inline-block;
+    background-color: #50FF44;
+    font-size: 14px;
+    color: #000000;
+    line-height: 14px;
+    font-weight: bold;
+    padding: 2px 5px;
+}
+
+
+/* ====== page CSS ====== */
+.topSelect { display: flex;}
+.topSelect>span{ 
+    display: inline-block;
+}
+.topSelect span:nth-of-type(1){ flex: 2;}
+.topSelect span:nth-of-type(2){ text-align: right;}
+.topSelect span> label{ 
+    font-weight: bold; 
+    font-size: 20px;
+}
+.topSelect span> select{}
+.topSelect span> select option{}
+.topSelect span i{ 
+    margin: 0 5px;
+}
+.topSelect span > span{ }
+.topSelect spani{
+    
+}
+.topSelect span .reading{ 
+    border: 2px solid #000000;
+    width: 48px;
+    height: 24px;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 24px;
+    cursor: pointer;
+}
+.topSelect span .reading .actRead{
+    width: 22px;
+    height: 22px;
+    background-color: #000;
+    display: inline-block;
+}
+.topSelect span .reading .actRead.Bright{
+   float: left;
+}
+.topSelect span .reading .actRead.Drak{
+   float: right;
+}
+
+
+.ImageArea {
+	position: relative;
+}
+.ImageArea img{ width:100%}
+.ImageArea button {
+	position: absolute;
+    top:0;
+    height: 100%;
+    width: 60px;
+    border: 0;
+    background-color: #F2F2F2;
+    cursor: pointer;
+    outline:none;
+}
+.ImageArea button:hover{ 
+    background-color: #000; 
+}
+.ImageArea button:hover i{ 
+    color: #50FF44;
+}
+.ImageArea button.prevBtn{
+    left: -60px;
+}
+.ImageArea button.nextBtn{
+    right: -60px;
+}
+.ImageArea button i{
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+}
+
+.Small_ImageArea{
+     
+}
+.Small_ImageArea>div{
+    text-align: center;
+    box-sizing: border-box;
+}
+.Small_ImageArea>div img:hover{
+    border: 3px solid #000;
+}
+.Small_ImageArea>div span{
+    
+    font-weight: bold;
+}
+
+

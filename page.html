@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Comic Viewer</title>
+    <script src="https://use.fontawesome.com/771d69edc4.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="index.html">Comicomic</a>
+    </nav>
+    <div class="container">
+        <section class="topSelect">
+            <span>
+                <label>My Hexschool<i class="fa fa-caret-right" aria-hidden="true"></i></label>
+                <select>
+                    <option value="Chapter 1">Chapter 1</option>
+                    <option value="Chapter 2">Chapter 2</option>
+                </select>
+                <select>
+                    <option value="Page 01">Page 01</option>
+                    <option value="Page 02">Page 02</option>
+                    <option value="Page 03">Page 03</option>
+                    <option value="Page 04">Page 04</option>
+                    <option value="Page 05">Page 05</option>
+                </select>
+            </span>
+            <span>
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+                <span class="reading">
+                    <span class="actRead Bright"></span>
+                </span>
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+            </span>
+        </section>
+        <section>
+            <div class="ImageArea">
+                <img class="mySlides" src="images/storyboard-1.png">
+                <img class="mySlides" src="images/storyboard-2.png">
+                <img class="mySlides" src="images/storyboard-3.png">
+                <img class="mySlides" src="images/storyboard-4.png">
+                <img class="mySlides" src="images/storyboard-5.png">
+                <img class="mySlides" src="images/storyboard-6.png">
+                
+                <button class="prevBtn" onclick="plusDivs(-1)"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                <button class="nextBtn" onclick="plusDivs(1)"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="w3-row-padding w3-section Small_ImageArea">
+                <div class="w3-col s2">
+                    <span>1</span>
+                    <img class="demo w3-opacity w3-hover-opacity-off" src="images/storyboard-1.png" style="width:100%" onclick="currentDiv(1)">
+                </div>
+                <div class="w3-col s2">
+                    <span>2</span>
+                    <img class="demo w3-opacity w3-hover-opacity-off" src="images/storyboard-2.png" style="width:100%" onclick="currentDiv(2)">
+                </div>
+                <div class="w3-col s2">
+                    <span>3</span>
+                    <img class="demo w3-opacity w3-hover-opacity-off" src="images/storyboard-3.png" style="width:100%" onclick="currentDiv(3)">
+                </div>
+                <div class="w3-col s2">
+                    <span>4</span>
+                    <img class="demo w3-opacity w3-hover-opacity-off" src="images/storyboard-4.png" style="width:100%" onclick="currentDiv(4)">
+                </div>
+                <div class="w3-col s2">
+                    <span>5</span>
+                    <img class="demo w3-opacity w3-hover-opacity-off" src="images/storyboard-5.png" style="width:100%" onclick="currentDiv(5)">
+                </div>
+                <div class="w3-col s2">
+                    <span>6</span>
+                    <img class="demo w3-opacity w3-hover-opacity-off" src="images/storyboard-6.png" style="width:100%" onclick="currentDiv(6)">
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<script src="js/all.js"></script>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+</html>
